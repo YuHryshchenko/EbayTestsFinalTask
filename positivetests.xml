@@ -1,0 +1,20 @@
+<suite name="SearchPositive" verbose="2">
+    <test name="Tests">
+        <classes>
+            <class name="tests.Tests">
+                <methods>
+                    <include name="searchResultsContainsSearchWord" />
+                    <include name="openCategoryProductFromTopMenu" />
+                    <include name="openAppleSmartWatchesFromTopMenu" />
+                    <include name="openSeries5AppleSmartWatchesFromTopMenu" />
+                    <include name="checkElementsAmountOnListAppleSmartWatchesPage" />
+                    <include name="openAppleProductPage" />
+                    <include name="openAppleProductPageItemSpecifics" />
+                    <include name="clickPlaceBidAppleProductPage" />
+                    <include name="clickAddToCartAppleProductPage" />
+                    <include name="clickRemoveFromCartAppleProductPage" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
