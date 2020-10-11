@@ -24,7 +24,7 @@ public class BaseTest {
         driver.get(EBAY_URL);
     }
     @AfterMethod
-    public void tearDown() { driver.close(); }
+    public void tearDown() { driver.quit(); }
 
     public WebDriver getDriver() {
         return driver;

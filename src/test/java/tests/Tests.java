@@ -15,9 +15,9 @@ public class Tests extends BaseTest {
     private static final String SEARCH_SYMBOLS = "@@@";
     private static final String SEARCH_ALWAYS_RESULT = "all-categories";
     private static final String SEARCH_RESULT_PAGE = "Electronics";
-    private static final String SEARCH_WORD = "Apple-Watches";
+    private static final String SEARCH_WORD = "Smart-Watches";
     private static final String COMPARE_WORDS = "Apple Watch Series 5";
-    private static final String COMPARE_ITEM = "About this product";
+    private static final String COMPARE_ITEM = "Item specifics";
     private static final String SEARCH_KEYWORD_URL = "signin.ebay.com";
     private static final int EXPECTED_PRODUCT_AMOUNT = 12;
     private static final String EXPECTED_AMOUNT_OF_PRODUCTS_IN_CART = "Qty 1";
@@ -66,12 +66,12 @@ public class Tests extends BaseTest {
         getBasePage().waitForElementVisibility(60, getSubElectronicsPage().openCellPhonesSmartWatchesAccessoriesList());
         getSubElectronicsPage().openSmartWatchesCategoryProductFromElectronicsPage();
         getBasePage().waitForElementVisibility(60, getSmartWatchesPage().openSmartWatchesList());
-        getSmartWatchesPage().openAppleSmartWatchesPage();
-        getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openChoiceSeries5AppleSmartWatchesList());
+        //getSmartWatchesPage().openAppleSmartWatchesPage();
+        //getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openChoiceSeries5AppleSmartWatchesList());
         getAppleSmartWatchesPage().clickChooseSeriesAppleSmartWatchesPage();
         getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openSeries5AppleSmartWatchesList());
         for (WebElement webElement : getSearchResultsPage().getSeries5AppleSmartWatchesList()) {
-            assertTrue(webElement.isDisplayed());
+             assertTrue(webElement.isDisplayed());
         }
     }
 
@@ -83,8 +83,8 @@ public class Tests extends BaseTest {
         getBasePage().waitForElementVisibility(60, getSubElectronicsPage().openCellPhonesSmartWatchesAccessoriesList());
         getSubElectronicsPage().openSmartWatchesCategoryProductFromElectronicsPage();
         getBasePage().waitForElementVisibility(60, getSmartWatchesPage().openSmartWatchesList());
-        getSmartWatchesPage().openAppleSmartWatchesPage();
-        getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
+        //getSmartWatchesPage().openAppleSmartWatchesPage();
+        //getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
         int actualElementsSize = getSearchResultsPage().getAppleSmartWatchesList().size();
         AssertJUnit.assertNotSame(actualElementsSize, EXPECTED_PRODUCT_AMOUNT);
         Assert.assertNotNull(actualElementsSize);
@@ -99,8 +99,8 @@ public class Tests extends BaseTest {
         getBasePage().waitForElementVisibility(60, getSubElectronicsPage().openCellPhonesSmartWatchesAccessoriesList());
         getSubElectronicsPage().openSmartWatchesCategoryProductFromElectronicsPage();
         getBasePage().waitForElementVisibility(60, getSmartWatchesPage().openSmartWatchesList());
-        getSmartWatchesPage().openAppleSmartWatchesPage();
-        getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
+        //getSmartWatchesPage().openAppleSmartWatchesPage();
+        //getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
         getAppleSmartWatchesPage().clickChooseSeriesAppleSmartWatchesPage();
         getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openSeries5AppleSmartWatchesList());
         getAppleSmartWatchesPage().clickChooseAppleProductPage();
@@ -117,8 +117,8 @@ public class Tests extends BaseTest {
         getBasePage().waitForElementVisibility(60, getSubElectronicsPage().openCellPhonesSmartWatchesAccessoriesList());
         getSubElectronicsPage().openSmartWatchesCategoryProductFromElectronicsPage();
         getBasePage().waitForElementVisibility(60, getSmartWatchesPage().openSmartWatchesList());
-        getSmartWatchesPage().openAppleSmartWatchesPage();
-        getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
+        //getSmartWatchesPage().openAppleSmartWatchesPage();
+        //getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
         getAppleSmartWatchesPage().clickChooseSeriesAppleSmartWatchesPage();
         getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openSeries5AppleSmartWatchesList());
         getAppleSmartWatchesPage().clickChooseAppleProductPage();
@@ -134,12 +134,12 @@ public class Tests extends BaseTest {
         getBasePage().waitForElementVisibility(60, getSubElectronicsPage().openCellPhonesSmartWatchesAccessoriesList());
         getSubElectronicsPage().openSmartWatchesCategoryProductFromElectronicsPage();
         getBasePage().waitForElementVisibility(60, getSmartWatchesPage().openSmartWatchesList());
-        getSmartWatchesPage().openAppleSmartWatchesPage();
-        getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
+        //getSmartWatchesPage().openAppleSmartWatchesPage();
+        //getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
         getAppleSmartWatchesPage().clickChooseSeriesAppleSmartWatchesPage();
         getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openSeries5AppleSmartWatchesList());
-        getAppleSmartWatchesPage().clickChooseAnotherAppleProductPage();
-        getBasePage().waitForElementVisibility(90, getAnotherProductPage().openAnotherAppleProductPage());
+        getAppleSmartWatchesPage().clickChooseAppleProductPage();
+        getBasePage().waitForElementVisibility(90, getProductPage().openAppleProductPage());
         getAnotherProductPage().clickButtonPlaceBid();
         getBasePage().implicitlyWait(90);
         assertTrue(getDriver().getCurrentUrl().contains(SEARCH_KEYWORD_URL));
@@ -153,11 +153,11 @@ public class Tests extends BaseTest {
         getBasePage().waitForElementVisibility(60, getSubElectronicsPage().openCellPhonesSmartWatchesAccessoriesList());
         getSubElectronicsPage().openSmartWatchesCategoryProductFromElectronicsPage();
         getBasePage().waitForElementVisibility(60, getSmartWatchesPage().openSmartWatchesList());
-        getSmartWatchesPage().openAppleSmartWatchesPage();
-        getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
+        //getSmartWatchesPage().openAppleSmartWatchesPage();
+        //getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
         getAppleSmartWatchesPage().clickChooseSeriesAppleSmartWatchesPage();
         getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openSeries5AppleSmartWatchesList());
-        getAppleSmartWatchesPage().clickChooseAppleProductPage();
+        getAppleSmartWatchesPage().clickChooseAnotherAppleProductPage();
         getBasePage().waitForElementVisibility(90, getProductPage().openAppleProductPage());
         getAnotherProductPage().clickButtonAddToCart();
         getBasePage().implicitlyWait(160);
@@ -174,11 +174,11 @@ public class Tests extends BaseTest {
         getBasePage().waitForElementVisibility(60, getSubElectronicsPage().openCellPhonesSmartWatchesAccessoriesList());
         getSubElectronicsPage().openSmartWatchesCategoryProductFromElectronicsPage();
         getBasePage().waitForElementVisibility(60, getSmartWatchesPage().openSmartWatchesList());
-        getSmartWatchesPage().openAppleSmartWatchesPage();
-        getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
+        //getSmartWatchesPage().openAppleSmartWatchesPage();
+        //getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openAppleSmartWatchesList());
         getAppleSmartWatchesPage().clickChooseSeriesAppleSmartWatchesPage();
         getBasePage().waitForElementVisibility(160, getAppleSmartWatchesPage().openSeries5AppleSmartWatchesList());
-        getAppleSmartWatchesPage().clickChooseAppleProductPage();
+        getAppleSmartWatchesPage().clickChooseAnotherAppleProductPage();
         getBasePage().waitForElementVisibility(90, getProductPage().openAppleProductPage());
         getAnotherProductPage().clickButtonAddToCart();
         getBasePage().implicitlyWait(160);
